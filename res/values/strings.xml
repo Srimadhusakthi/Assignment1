@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Assignment</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="view">Loading Image</string>
+    <string name="loading">Click to view Image in Listview</string>
+    <string name="title_activity_listof_image">ListofImage</string>
+    <string name="title_activity_insertand_retrive_blob_data">InsertandRetriveBlobData</string>
+<string-array 
+    name="ids">image</string-array>
+</resources>
