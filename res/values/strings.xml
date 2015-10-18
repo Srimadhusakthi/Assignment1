@@ -7,6 +7,7 @@
     <string name="view">Loading Image</string>
     <string name="loading">Click to view Image in Listview</string>
     <string name="title_activity_listof_image">ListofImage</string>
+    <string name="title_activity_image">ImageActivity</string>
     <string name="title_activity_insertand_retrive_blob_data">InsertandRetriveBlobData</string>
 <string-array 
     name="ids">image</string-array>
