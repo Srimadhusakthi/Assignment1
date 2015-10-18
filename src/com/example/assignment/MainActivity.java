@@ -24,25 +24,13 @@ public ImageView mImageView;
 public static final int SELECTING_IMAGE=1 ;
 String selectedimage;
 public SQLiteDatabase mSqLiteDatabase;
-public Sqlite mSqlite;
 public DATAbase DATAbase;
-public ImageAdapter imageAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialize();
         clickEvent();
-
-        DATAbase = new DATAbase(this);
-    		Image employee_One = new Image(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher));
-    	
-//    		DATAbase.insertEmpDetails(employee_One);
-//    		DATAbase.close();
-//    		employee_One = null;
-    	
-//    		DATAbase.close();
-    		
 
     	
     }
@@ -52,6 +40,18 @@ public void initialize(){
 	mViewinListview=(Button) findViewById(R.id.loading_imagefrom_sdcard);
 	mLoading=(Button) findViewById(R.id.view);
 	mSave=(Button) findViewById(R.id.save);
+}
+public void savingImage(){
+
+    DATAbase = new DATAbase(this);
+		Image image = new Image(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher));
+	//		DATAbase.insertimage(image);
+//		DATAbase.close();
+//		employee_One = null;
+	
+//		DATAbase.close();
+		
+
 }
 public void clickEvent(){
 	mSave.setOnClickListener(new OnClickListener() {
@@ -91,29 +91,7 @@ public void clickEvent(){
         return true;
     }
     
-    class Sqlite extends SQLiteOpenHelper{
-
-		public static final String DNAME="dname";
-    	public static final String TNAME="TNAME";
-    	public static final String IMAGE="IMAGE";
-    	public static final int version=1;
-    	public Sqlite(Context context) {
-			super(context, DNAME, null, version);
-			// TODO Auto-generated constructor stub
-		}
-		@Override
-		public void onCreate(SQLiteDatabase arg0) {
-			// TODO Auto-generated method stub
-			String string="CREATE TABLE "  + TNAME + " ( " +  IMAGE + " TEXT )";
-		       arg0.equals(string);
-		}
-		@Override
-		public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2) {
-			// TODO Auto-generated method stub
-			arg0.equals("DROP TABLE IF EXITS " + TNAME);
-		}
-    	
-    }
+ 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub

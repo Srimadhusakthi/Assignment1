@@ -8,6 +8,9 @@
         android:minSdkVersion="17"
         android:targetSdkVersion="23" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -29,6 +32,10 @@
         <activity
             android:name="com.example.assignment.InsertandRetriveBlobData"
             android:label="@string/title_activity_insertand_retrive_blob_data" >
+        </activity>
+        <activity
+            android:name="com.example.assignment.ImageActivity"
+            android:label="@string/title_activity_image" >
         </activity>
     </application>
 
